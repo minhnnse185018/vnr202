@@ -218,10 +218,10 @@ export default function App() {
         </div>
       </div>
 
-      {/* ================= MODAL THÀNH VIÊN, AI & LIÊN HỆ THỰC TẾ ================= */}
+      {/* ================= MODAL THÀNH VIÊN, AI & LIÊN HỆ THỰC TIỄN ================= */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in" onClick={() => setShowModal(false)}>
-          <div className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]" onClick={e => e.stopPropagation()}>
+          <div className="w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]" onClick={e => e.stopPropagation()}>
             
             {/* Modal Header */}
             <div className="bg-[#2C0A0B] p-6 flex justify-between items-center relative shrink-0">
@@ -235,7 +235,7 @@ export default function App() {
             {/* Modal Content - Khung cuộn nội dung */}
             <div className="p-6 md:p-8 overflow-y-auto">
               
-              {/* Nhóm Thực Hiện */}
+              {/* 1. Nhóm Thực Hiện */}
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-4 text-[#8C3F42] border-b border-gray-100 pb-2">
                   <Users size={20} />
@@ -250,7 +250,7 @@ export default function App() {
                 </ul>
               </div>
 
-              {/* Minh Bạch AI (Chi tiết) */}
+              {/* 2. Minh Bạch AI */}
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-4 text-[#8C3F42] border-b border-gray-100 pb-2">
                   <Sparkles size={20} />
@@ -276,15 +276,58 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Liên Hệ Thực Tế (Bỏ icon) */}
+              {/* 3. Liên Hệ Thực Tiễn (Format xịn xò) */}
               <div>
                 <div className="flex items-center mb-4 text-[#8C3F42] border-b border-gray-100 pb-2">
-                  <h4 className="font-bold uppercase tracking-wider">Liên Hệ Thực Tế & Giá Trị Cốt Lõi</h4>
+                  <h4 className="font-bold uppercase tracking-wider">Liên Hệ Thực Tiễn</h4>
                 </div>
-                <div className="bg-[#FDF8EE] border border-[#F3E6D0] p-5 rounded-xl">
-                  <p className="text-sm text-gray-700 leading-relaxed text-justify">
-                    <strong>Số hóa và Game hóa Giáo dục (EdTech):</strong> Sản phẩm là minh chứng cho việc ứng dụng công nghệ để giải quyết bài toán giảng dạy các môn lý luận chính trị và lịch sử. Bằng cách thay thế phương pháp học thụ động qua trang sách bằng <strong>Không gian 3D Thực tế ảo (Viverse)</strong> kết hợp với <strong>Trò chơi cạnh tranh (Caro Nhân Phẩm)</strong>, nhóm hướng tới việc tạo ra môi trường học tập trực quan, sinh động. Sinh viên khối ngành kỹ thuật không chỉ tiếp thu kiến thức Lịch sử Đảng một cách tự nhiên mà còn chủ động tương tác, khắc sâu tiến trình lịch sử dân tộc.
-                  </p>
+                
+                <div className="bg-[#FDF8EE] border border-[#F3E6D0] p-6 rounded-xl text-gray-700 text-sm leading-relaxed space-y-5">
+                  
+                  {/* Khối 1: Bối cảnh */}
+                  <div>
+                    <strong className="text-[#9A2A2B] block mb-2 text-base">Giai đoạn này có giá trị gì với việc giải quyết các vấn đề đời sống hôm nay?</strong>
+                    <div className="bg-white p-3 rounded border border-gray-200">
+                      <strong>Bài học rút ra từ sai lầm trong Cải cách ruộng đất và cách Đảng sửa sai:</strong> <br/>
+                      <span className="text-[#D35400] font-bold text-base mt-1 block">"Mọi việc phải XUẤT PHÁT TỪ THỰC TIỄN, không giáo điều — và phải DÁM NHÌN NHẬN, SỬA SAI."</span>
+                    </div>
+                  </div>
+                  
+                  {/* Khối 2: Vì sao */}
+                  <div>
+                    <strong className="text-gray-800 block mb-1">Vì sao bài học này quan trọng?</strong>
+                    <p className="text-justify">
+                      Trong Cải cách ruộng đất, sai lầm xảy ra không phải do thiếu nhiệt huyết, mà do chủ quan, giáo điều — máy móc rập khuôn mô hình bên ngoài mà không xuất phát từ tình hình thực tế của nông thôn Việt Nam. Nhưng điều đáng học là Đảng đã công khai tự phê bình trước nhân dân và kiên quyết sửa sai.
+                    </p>
+                  </div>
+
+                  {/* Khối 3: Liên hệ sinh viên */}
+                  <div className="bg-white p-5 border border-[#E8B036]/50 rounded-lg shadow-sm">
+                    <strong className="text-[#8C3F42] flex items-center gap-2 mb-3 text-base">
+                      VÍ DỤ LIÊN HỆ CỤ THỂ (Vấn đề của chính sinh viên)
+                    </strong>
+                    
+                    <p className="mb-2"><strong>Vấn đề:</strong> Chọn ngành học và định hướng nghề nghiệp.</p>
+                    
+                    <p className="mb-2 text-justify">
+                      <strong>"Giáo điều"</strong> trong đời sống sinh viên hôm nay chính là chạy theo trào lưu, sao chép người khác: thấy ngành nào "hot", thấy bạn bè làm gì là làm theo, mà không đánh giá đúng năng lực, sở thích và hoàn cảnh thực tế của bản thân. Kết quả là chọn sai ngành, học không nổi, chán nản, lãng phí thời gian và tiền bạc.
+                    </p>
+                    
+                    <p className="mb-2 text-justify">
+                      <strong>Bài học áp dụng:</strong> Giống như Đảng phải "xuất phát từ thực tiễn", mỗi sinh viên cần xuất phát từ thực tế của chính mình (năng lực, đam mê, điều kiện gia đình, nhu cầu thị trường lao động) để ra quyết định — chứ không rập khuôn.
+                    </p>
+                    
+                    <p className="mb-4 text-justify">
+                      <strong>Và khi lỡ chọn sai?</strong> Học theo tinh thần "sửa sai" của Đảng: dám thừa nhận mình đã chọn chưa đúng, điều chỉnh kịp thời (chuyển ngành, học thêm kỹ năng, đổi hướng) thay vì giấu giếm, cố chấp đi tiếp con đường không phù hợp. Nhận sai và sửa sai không phải là thất bại — đó là sự trưởng thành.
+                    </p>
+
+                    {/* Khối tóm tắt */}
+                    <div className="bg-gray-50 p-3 rounded-md text-[13.5px] border-l-4 border-[#9A2A2B] space-y-1">
+                      <span className="block">❌ <strong>Giáo điều:</strong> "Sách nói sao làm y vậy", bất chấp thực tế.</span>
+                      <span className="block">✅ <strong>Không giáo điều:</strong> Lấy thực tế làm gốc, vận dụng lý thuyết cho linh hoạt, phù hợp.</span>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
