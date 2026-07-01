@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { MapPin, Landmark, Gamepad2, Users, Sparkles, X, Lightbulb } from 'lucide-react';
+import { MapPin, Landmark, Gamepad2, Users, Sparkles, X } from 'lucide-react';
 
-
+// Import hình ảnh từ thư mục assets theo đúng source của bạn
 import img1954 from './assets/timeline/1954-geneva-division.jpg';
 import img1958 from './assets/timeline/1954-1958-reconstruction.jpg';
 import img1960 from './assets/timeline/1958-1960-turning-point.jpg';
@@ -250,7 +250,7 @@ export default function App() {
                 </ul>
               </div>
 
-              {/* Minh Bạch AI (Mở rộng) */}
+              {/* Minh Bạch AI (Chi tiết) */}
               <div className="mb-8">
                 <div className="flex items-center gap-2 mb-4 text-[#8C3F42] border-b border-gray-100 pb-2">
                   <Sparkles size={20} />
@@ -276,10 +276,9 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Liên Hệ Thực Tế */}
+              {/* Liên Hệ Thực Tế (Bỏ icon) */}
               <div>
-                <div className="flex items-center gap-2 mb-4 text-[#8C3F42] border-b border-gray-100 pb-2">
-                  <Lightbulb size={20} />
+                <div className="flex items-center mb-4 text-[#8C3F42] border-b border-gray-100 pb-2">
                   <h4 className="font-bold uppercase tracking-wider">Liên Hệ Thực Tế & Giá Trị Cốt Lõi</h4>
                 </div>
                 <div className="bg-[#FDF8EE] border border-[#F3E6D0] p-5 rounded-xl">
@@ -288,6 +287,7 @@ export default function App() {
                   </p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
