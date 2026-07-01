@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Landmark, Gamepad2, Users, Sparkles, X, Lightbulb } from 'lucide-react';
 
-// Import hình ảnh từ thư mục assets theo đúng source của bạn
+
 import img1954 from './assets/timeline/1954-geneva-division.jpg';
 import img1958 from './assets/timeline/1954-1958-reconstruction.jpg';
 import img1960 from './assets/timeline/1958-1960-turning-point.jpg';
